@@ -36,15 +36,33 @@ indent-width = 4
 target-version = "py312"
 
 [lint]
-# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
-select = ["ALL"]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "ARG001", # unused arguments in functions
+]
 ignore = [
-    "COM812", "COM819",
-    "D100", "D203", "D213", "D300",
-    "E111", "E114", "E117",
-    "ISC001", "ISC002",
-    "Q000", "Q001", "Q002", "Q003",
-    "W191",
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "W191",  # indentation contains tabs
+    "B904",  # Allow raising exceptions without from e, for HTTPException
+    "COM819",  # Trailing comma prohibited
+    "D100",    # Missing docstring in public module(file)
+    "D104",    # Missing docstring in public package
+    "D203",    # 1 blank line required before class docstring
+    "E201",    # Whitespace after '('
+    "E202",    # Whitespace before ')'
+    "E203",    # Whitespace before ':'
+    "E221",    # Multiple spaces before operator
+    "E241",    # Multiple spaces after ','
+    "E251",    # Unexpected spaces around keyword / parameter equals
+    "W291",    # Trailing whitespace
+    "W293",    # Blank line contains whitespace
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
