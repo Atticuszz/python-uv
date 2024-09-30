@@ -151,3 +151,8 @@ uv add {libraries}
     ├── extensions.json
     └── settings.json
 ```
+
+mkdocs deps
+```bash
+uv add mkdocs-material pymdown-extensions mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-obsidian-bridge mkdocs-publisher --optional mkdocs
+```
