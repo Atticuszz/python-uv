@@ -8,6 +8,8 @@
 [![Versions](https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12%20-green.svg)](https://github.com/atticuszz/python-uv)
 
 [![Test](https://github.com/atticuszz/python-uv/actions/workflows/main.yml/badge.svg)](https://github.com/atticuszz/python-uv/actions/workflows/main.yml)
+[![Coverage](https://codecov.io/gh/Atticuszz/python-uv/branch/main/graph/badge.svg?token=YOUR_TOKEN)](https://github.com/atticuszz/python-uv/actions/workflows/main.yml)
+
 <!-- [![Docker](https://github.com/atticuszz/python-uv/actions/workflows/docker.yml/badge.svg)](https://github.com/atticuszz/python-uv/actions/workflows/docker.yml) -->
 
 </div>
