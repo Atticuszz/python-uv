@@ -40,12 +40,8 @@ exclude = ["venv", ".venv", "tests"]
 
 [tool.ruff]
 # cover and extend the default config in https://docs.astral.sh/ruff/configuration/
-
-extend-exclude = ["tests"]
-
-
-# Assume Python 3.12
-target-version = "py312"
+extend-exclude = ["alembic"]
+target-version = "py311"
 
 [tool.ruff.lint]
 select = [
