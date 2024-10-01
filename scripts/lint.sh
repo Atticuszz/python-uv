@@ -5,4 +5,4 @@ set -x
 
 mypy src                # type check
 ruff check src          # linter
-ruff format src --check # formater
+ruff format src --check # formatter

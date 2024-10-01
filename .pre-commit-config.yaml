@@ -1,16 +1,32 @@
-default_stages: [commit]
+# https://pre-commit.com/
+# `pre-commit install` to set up the git hook scripts
+# `pre-commit autoupdate` to update repos
+# `pre-commit run --all-files` run hooks for all file
 repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: check-toml
+      - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+    # spell check
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+        files: \.(py|sh|rst|yml|yaml)$
+        # args: [--write-changes]
+    # lint and format
   - repo: https://github.com/astral-sh/ruff-pre-commit
-  # Ruff version.
     rev: v0.6.8
     hooks:
-      # Run the linter.
       - id: ruff
-        types_or: [ python, pyi, jupyter ]
         args: [ --fix ]
-      # Run the formatter.
       - id: ruff-format
-        types_or: [ python, pyi, jupyter ]
   # - repo: https://github.com/hadolint/hadolint
   #   rev: v2.12.0
   #   hooks:
@@ -21,5 +37,8 @@ repos:
   #       types: ["dockerfile"]
   #       entry: hadolint
 ci:
+  # Settings for the https://pre-commit.ci/ continuous integration service
+  autofix_prs: True
   autofix_commit_msg: 🎨 [pre-commit.ci] Auto format from pre-commit.com hooks
   autoupdate_commit_msg: ⬆ [pre-commit.ci] pre-commit autoupdate
+  autoupdate_schedule: monthly
