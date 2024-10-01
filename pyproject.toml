@@ -95,7 +95,6 @@ filterwarnings = ["error"]  # Treat all warnings as errors
 [tool.coverage.report]
 skip_covered = true
 show_missing = true
-ignore_errors = true
 precision = 2
 exclude_lines = [
     'def __repr__',
