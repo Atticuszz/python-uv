@@ -73,12 +73,8 @@ ignore = [
     "W293",    # Blank line contains whitespace
 ]
 
-# Allow fix for all enabled rules (when `--fix`) is provided.
-fixable = ["ALL"]
-unfixable = []
-
-# Allow unused variables when underscore-prefixed.
-dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+# Avoid trying to fix flake8-bugbear (`B`) violations.
+unfixable = ["B"]
 
 [tool.ruff.format]
 # Like Black, use double quotes for strings.
