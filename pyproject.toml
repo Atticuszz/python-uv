@@ -41,7 +41,7 @@ exclude = ["venv", ".venv"]
 [tool.ruff]
 # cover and extend the default config in https://docs.astral.sh/ruff/configuration/
 extend-exclude = [""]
-target-version = "py311"
+target-version = "py310"
 
 [tool.ruff.lint]
 select = [
