@@ -28,10 +28,10 @@ jobs:
         run: uv sync --python ${{ matrix.python-version }} --all-extras --dev
 
       - name: Run linters
-        run: scripts/lint
+        run: scripts/lint.sh
 
       - name: Run tests
-        run: scripts/test
+        run: scripts/test.sh
 
 
 # Reference
