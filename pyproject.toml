@@ -91,11 +91,27 @@ addopts = "-rXs --strict-config --strict-markers"
 xfail_strict = true         # Treat tests that are marked as xfail but pass as test failures
 filterwarnings = ["error"]  # Treat all warnings as errors
 
+# https://coverage.readthedocs.io/en/latest/config.html#report
 [tool.coverage.report]
-# fail_under = 100
-show_missing = true
 skip_covered = true
+show_missing = true
+ignore_errors = true
+precision = 2
+exclude_lines = [
+    'def __repr__',
+    'pragma: no cover',
+    'raise NotImplementedError',
+    'if TYPE_CHECKING:',
+    'if typing.TYPE_CHECKING:',
+    '@overload',
+    '@typing.overload',
+    '\(Protocol\):$',
+    'typing.assert_never',
+    'assert_never',
+    'if __name__ == .__main__.:',
+]
 
 # Reference
 # 1. https://github.com/Kludex/python-template/blob/main/template/%7B%7B%20project_slug%20%7D%7D/pyproject.toml.jinja
 # 2. https://github.com/fastapi/full-stack-fastapi-template/blob/master/backend/pyproject.toml
+# 3.https://github.com/pydantic/logfire
