@@ -26,6 +26,7 @@ jobs:
 
       - name: Install dependencies # Sync without updating the `uv.lock` file
         run: uv sync --python ${{ matrix.python-version }} --all-extras --dev
+
       - name: Run tests
         run: uv run bash scripts/test.sh
 
