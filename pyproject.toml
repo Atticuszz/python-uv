@@ -39,11 +39,10 @@ exclude = ["venv", ".venv", "tests"]
 
 
 [tool.ruff]
-# cover the default config in https://docs.astral.sh/ruff/configuration/
+# cover and extend the default config in https://docs.astral.sh/ruff/configuration/
 
-# Same as Black.
-line-length = 88
-indent-width = 4
+extend-exclude = ["tests"]
+
 
 # Assume Python 3.12
 target-version = "py312"
