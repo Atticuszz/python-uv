@@ -115,5 +115,5 @@ exclude_lines = [
 # Reference
 # 1. https://github.com/Kludex/python-template/blob/main/template/%7B%7B%20project_slug%20%7D%7D/pyproject.toml.jinja
 # 2. https://github.com/fastapi/full-stack-fastapi-template/blob/master/backend/pyproject.toml
-# 3.https://github.com/pydantic/logfire
-# 4.https://coverage.readthedocs.io/en/latest/index.html
+# 3. https://github.com/pydantic/logfire
+# 4. https://coverage.readthedocs.io/en/latest/index.html
