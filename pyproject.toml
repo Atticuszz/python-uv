@@ -35,12 +35,12 @@ dev-dependencies = [
 
 [tool.mypy]
 strict = true
-exclude = ["venv", ".venv", "alembic"]
+exclude = ["venv", ".venv"]
 
 
 [tool.ruff]
 # cover and extend the default config in https://docs.astral.sh/ruff/configuration/
-extend-exclude = ["alembic"]
+extend-exclude = [""]
 target-version = "py311"
 
 [tool.ruff.lint]
