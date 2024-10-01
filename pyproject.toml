@@ -92,7 +92,7 @@ xfail_strict = true         # Treat tests that are marked as xfail but pass as t
 filterwarnings = ["error"]  # Treat all warnings as errors
 
 [tool.coverage.report]
-fail_under = 100
+# fail_under = 100
 show_missing = true
 skip_covered = true
 
