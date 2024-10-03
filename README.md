@@ -101,7 +101,7 @@ fail_under = 100
 show_missing = true
 skip_covered = true
 ```
-todo：codecov ci
+todo：codecov ci and replace coverage with it
 
 ### commitzen
 
